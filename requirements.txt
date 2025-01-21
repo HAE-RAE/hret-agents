@@ -1,0 +1,7 @@
+pandas
+datasets
+requests
+smolagents
+litellm
+python-dotenv
+PyGithub
