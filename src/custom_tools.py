@@ -7,9 +7,12 @@ from litellm import batch_completion
 from src import parse_litellm_response
 import os
 from datasets import Dataset
+from dotenv import load_dotenv
 
-os.environ['OPENAI_API_KEY'] = ""
-access_token = ""
+load_dotenv()
+
+os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
+access_token = os.getenv('HF_ACCESS_TOKEN')
 
 @tool
 def check_hf_dataset_subset(dataset_name: str) -> list:
