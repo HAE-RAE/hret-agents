@@ -1,2 +1,5 @@
-# hret-agents
-Automated agents for HRET.
+# hret-agent
+
+hret-agent is a production-ready tool designed to enhance the haerae-evaluation-toolkit by automating the translation of Hugging Face datasets and generating fully functional dataset modules. The agent downloads a specified dataset, translates both column names and cell content into Korean using batch translation with retry logic, and creates a markdown table of the top 5 rows. It then generates a guide prompt (which includes base class definitions) and utilizes OpenAI's GPT API to produce a complete dataset module. The generated module is saved locally and can optionally be pushed to the Hugging Face Hub.
+
+To get started, configure your API keys and settings in `config/config.py` and install the necessary dependencies with `pip install -r requirements.txt`. Run the agent using a command like `python src/main.py --dataset "HAERAE-HUB/QARV" --subset "your_subset" --split train --push`. The repository leverages the `smolagents` framework to encapsulate each function as a tool and orchestrates the entire process through an agent class, making it modular, extensible, and ready for immediate use.

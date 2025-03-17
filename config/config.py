@@ -1,0 +1,11 @@
+class Config:
+    OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
+    HF_ACCESS_TOKEN = "YOUR_HF_ACCESS_TOKEN"
+    HF_API_TOKEN = "YOUR_HF_API_TOKEN"
+
+    # 모델 및 번역/모듈 생성 관련 설정
+    MODEL_TRANSLATION = "gpt-4o-mini"
+    MODEL_MODULE = "gpt-4o-mini"
+    TRANSLATION_MAX_RETRIES = 3
+    TRANSLATION_SLEEP_TIME = 1.0
+    BATCH_SIZE = 50
